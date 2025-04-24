@@ -32,7 +32,7 @@ if uploaded_file is not None:
         draw.text(box[:2], f"{model.config.id2label[label.item()]} {score.item():.2f}", fill="red")
 
         
-    st.image(image, caption="Detected Objects", use_column_width=True)
+    st.image(image, caption="Detected Objects",  use_container_width=True)
     
     st.write("Detected Objects:")
     for score, label, box in zip(results["scores"], results["labels"], results["boxes"]):
